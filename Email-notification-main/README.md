@@ -1,4 +1,4 @@
-#  Email_Notification
+#  Email-notification-main
 
 As a **Cloud Engineer**, I built a **serverless event-driven email notification system** using **AWS S3, SNS, Lambda, IAM, and CloudWatch**.  
 This system automatically sends an email notification whenever a new file is uploaded to an S3 bucket.

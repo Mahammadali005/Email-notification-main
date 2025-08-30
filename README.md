@@ -4,7 +4,6 @@ As a **Cloud Engineer**, I built a **serverless event-driven email notification 
 This system automatically sends an email notification whenever a new file is uploaded to an S3 bucket.
 
 ---
-
 ##  Architecture
 
 The overall project architecture is shown below:

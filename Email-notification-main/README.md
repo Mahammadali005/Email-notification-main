@@ -9,7 +9,7 @@ This system automatically sends an email notification whenever a new file is upl
 
 The overall project architecture is shown below:
 
-![Architecture Diagram](image-1.png)
+![Architecture Diagram](images/flowchart.jpg)
 
 ---
 
@@ -18,14 +18,14 @@ The overall project architecture is shown below:
 ### 1. File Upload to S3
 A file is uploaded to an **S3 bucket**, which triggers the workflow.
 
-![S3 Bucket](image-2.png)
+![S3 Bucket](images/S3.png)
 
 ---
 
 ### 2. SNS Notification
 The S3 event is configured to publish to an **Amazon SNS Topic**, which handles the delivery of notifications.
 
-![SNS](image-3.png)
+![SNS](images/SNS.png)
 
 ---
 
@@ -36,7 +36,7 @@ A dedicated **IAM Role** was created for the Lambda function with the following 
 - `AWSLambda_FullAccess`
 - `AWSLambdaBasicExecutionRole`
 
-![IAM Policy](image-4.png)
+![IAM Policy](images/IAM_policy.jpg)
 
 ---
 
@@ -44,14 +44,14 @@ A dedicated **IAM Role** was created for the Lambda function with the following 
 The **Lambda function** is triggered when a new file is uploaded.  
 It processes the event and sends details to the SNS topic.
 
-![Lambda Function](image-5.png)
+![Lambda Function](images/lambda.png)
 
 ---
 
 ### 5. Email Notification
 The subscribed email address receives structured alerts with file details (name, size, timestamp, bucket).
 
-![Email Output](output.png)
+![Email Output](images/output.png)
 
 ---
 
@@ -71,5 +71,5 @@ Logs and metrics from Lambda execution are monitored in **CloudWatch** for debug
 ##  Sample Email Notification
 
 
-### final output ![output](image.png)
+### final output ![output](images/output.png)
 
